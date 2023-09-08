@@ -23,7 +23,7 @@ class VideoInfo extends StatelessWidget {
                 children: [
                   Container(
                     width: MediaQuery.of(context).size.width,
-                    height: 200,
+                    height: 300,
                     // ignore: prefer_const_constructors
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -113,22 +113,23 @@ class VideoInfo extends StatelessWidget {
                       ],
                     ),
                   ),
+                  Expanded(
+                    child: Container(
+                      color: Colors.black,
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.only(
+                                topRight: Radius.circular(50))),
+                        height: 26,
+                      ),
+                    ),
+                  )
                 ],
               ),
             ),
           ),
         ),
-        Expanded(
-          child: Container(
-            color: Colors.black,
-            child: Container(
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(topRight: Radius.circular(50))),
-              height: 26,
-            ),
-          ),
-        )
       ]),
     );
   }
