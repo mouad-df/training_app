@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:training_app/screens/video_info.dart';
 import 'package:training_app/widgets/focus_square.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -57,19 +59,22 @@ class HomeScreen extends StatelessWidget {
                     "Your program",
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
                   ),
-                  Row(children: [
-                    Text(
-                      "Details",
-                      style: TextStyle(
-                        color: Colors.blue,
-                        fontSize: 20,
+                  InkWell(
+                    onTap: ()=>Get.to(()=> VideoInfo()),
+                    child: Row(children: [
+                      Text(
+                        "Details",
+                        style: TextStyle(
+                          color: Colors.blue,
+                          fontSize: 20,
+                        ),
                       ),
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Icon(Icons.arrow_forward),
-                  ])
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Icon(Icons.arrow_forward),
+                    ]),
+                  )
                 ],
               ),
               SizedBox(
@@ -82,10 +87,9 @@ class HomeScreen extends StatelessWidget {
                 decoration: BoxDecoration(
                     boxShadow: [
                       BoxShadow(
-                          offset: Offset(10, -10),
-                          blurRadius: 80,
-                          color:
-                              Color.fromARGB(255, 26, 35, 39).withOpacity(0.7)),
+                          offset: Offset(8, -8),
+                          blurRadius: 10,
+                          color:Color.fromARGB(255, 26, 35, 39).withOpacity(0.7)),
                     ],
                     gradient: LinearGradient(
                       colors: [
