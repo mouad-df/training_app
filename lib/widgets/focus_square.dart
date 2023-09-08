@@ -8,28 +8,43 @@ class FocusSquare extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 30, vertical: 14),
-      decoration: BoxDecoration(boxShadow: [
+      margin: EdgeInsets.symmetric(vertical: 5),
+      padding: EdgeInsets.symmetric(horizontal: 30, vertical: 8),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        boxShadow: [
         BoxShadow(
             offset: Offset(8, 10),
             blurRadius: 40,
             color: Color.fromARGB(255, 208, 224, 237)),
-
-      ], color: Colors.white, borderRadius: BorderRadius.circular(15)),
+      ],
+      borderRadius: BorderRadius.circular(15)),
       height: 160,
       width: 150,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
+        
         children: [
-          //image
-          Image.asset(
-            imagePath,
-            height: 60,
+          Container(
+            height: 20,
+            
           ),
+          //image
+          Column(
+            children: [
+              Image.asset(
+            imagePath,
+            color: Color.fromARGB(255, 2, 17, 30),
+            height: 80,
+          ),
+          SizedBox(height: 10,),
           Text(
             muscleName,
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(
+              fontSize: 19,
+              color: Colors.black),
           )
+            ],
+          ),
         ],
       ),
     );
